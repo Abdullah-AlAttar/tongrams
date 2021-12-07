@@ -61,7 +61,9 @@ jobs:
 
     # NOTE: If a boost version matching all requirements cannot be found,
     # this build step will fail
-
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      
       env:
         CIBW_SKIP: "cp27* cp35-*"
     
