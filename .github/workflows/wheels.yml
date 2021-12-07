@@ -45,7 +45,7 @@ jobs:
 
     - name: Install deps
       run: |
-          python3 -m pip install pybind11==2.7.1
+          python3 -m pip install pybind11==2.7.1 && mkdir boost
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
       id: install-boost
