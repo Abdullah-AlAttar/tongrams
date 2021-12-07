@@ -15,7 +15,8 @@
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 from setuptools import setup
 
-include_dirs = ['./include', './external/emphf', './external/essentials']
+include_dirs = ['./include', './external/emphf', './external/essentials',
+                './boost/include', './boost/boost/include']
 
 ext_modules = [
     Pybind11Extension("tongrams",
