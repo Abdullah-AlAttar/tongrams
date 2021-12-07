@@ -9,6 +9,7 @@ using namespace tongrams;
 typedef ef_trie_IC_ranks_count_lm count_lm_type;
 typedef ef_trie_prob_lm prob_lm_type;
 
+
 template <typename Model>
 struct PyModel {
     PyObject_HEAD Model* model;
