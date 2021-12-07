@@ -43,9 +43,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install cibuildwheel
+    - name: Install deps
       run: |
-          python3 -m pip install pybind11==2.7.1 && apt-get install libboost-all-dev -y
+          python3 -m pip install pybind11==2.7.1 && sudo apt-get install libboost-all-dev -y
       env:
         CIBW_SKIP: "cp27*"
     
