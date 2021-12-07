@@ -48,7 +48,7 @@ jobs:
           git submodule update --recursive --remote
     - name: Install deps
       run: |
-          python3 -m pip install pybind11==2.7.1 && mkdir boost
+          python3 -m pip install pybind11==2.7.1 && mkdir boost && sudo apt-get install libboost-all-dev
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
       id: install-boost
