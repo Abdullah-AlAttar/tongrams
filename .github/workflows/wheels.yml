@@ -57,11 +57,13 @@ jobs:
         # OPTIONAL: Specify a platform version
         platform_version: 18.04
         # OPTIONAL: Specify a custom install location
+        boost_install_dir: ./boost
+
     # NOTE: If a boost version matching all requirements cannot be found,
     # this build step will fail
 
       env:
-        CIBW_SKIP: "cp27*"
+        CIBW_SKIP: "cp27* cp35-*"
     
     - uses: pypa/cibuildwheel@v1.12.0
 
