@@ -42,7 +42,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@master
     - name: Install deps
       run: |
           python3 -m pip install pybind11==2.7.1 && mkdir boost
