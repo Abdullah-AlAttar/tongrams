@@ -14,6 +14,7 @@
 # exit()
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 from setuptools import setup
+import os
 
 include_dirs = ['./include', './external/emphf', './external/essentials',
                 './boost/include', './boost/boost/include']
@@ -23,7 +24,8 @@ ext_modules = [
                       sources=['./python/tongrams_pybind.cpp'],
                       cxx_std=17,
                       include_dirs=include_dirs,
-                      libraries=['boost_iostreams', 'boost_regex'])
+                      libraries=['boost_iostreams', 'boost_regex'],
+                      library_dirs=[os.path.join("boost", "boost", "lib")])
 ]
 setup(
     ext_modules=ext_modules,
