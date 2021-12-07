@@ -45,7 +45,7 @@ jobs:
 
     - name: Install cibuildwheel
       run: |
-          python3 -m pip install pybind11==2.7.1 && yum install boost boost-iostreams boost-regex -y
+          python3 -m pip install pybind11==2.7.1 && apt-get install libboost-all-dev -y
       env:
         CIBW_SKIP: "cp27*"
     
