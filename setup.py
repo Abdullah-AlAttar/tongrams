@@ -24,7 +24,7 @@ ext_modules = [
                       sources=['./python/tongrams_pybind.cpp'],
                       cxx_std=17,
                       include_dirs=include_dirs,
-                      libraries=['boost_iostreams-mt-x64', 'boost_regex-mt-x64'],
+                      libraries=['boost_iostreams', 'boost_regex'],
                       library_dirs=[os.path.join("boost", "boost", "lib")])
 ]
 setup(
