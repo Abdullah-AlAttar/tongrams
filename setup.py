@@ -25,7 +25,7 @@ ext_modules = [
                       cxx_std=17,
                       include_dirs=include_dirs,
                       libraries=['boost_iostreams', 'boost_regex'],
-                      library_dirs=[os.path.join("boost", "boost", "lib")])
+                      library_dirs=['./lib'])
 ]
 setup(
     ext_modules=ext_modules,
