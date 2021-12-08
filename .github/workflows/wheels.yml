@@ -50,7 +50,7 @@ jobs:
       run: |
           python3 -m pip install pybind11==2.7.1 && mkdir boost && sudo apt-get install libboost-all-dev
           mkdir ./lib 
-          cp /usr/lib/x86_64-linux-gnu/liboost_regex.so ./lib && cp /usr/lib/x86_64-linux-gnu/libboost_iostreams.so ./libs
+          cp /usr/lib/x86_64-linux-gnu/libboost_regex.so ./lib && cp /usr/lib/x86_64-linux-gnu/libboost_iostreams.so ./libs
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
       id: install-boost
